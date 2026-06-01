@@ -1,0 +1,26 @@
+# progress tracking
+PROGRESS.md
+
+# python
+__pycache__/
+*.pyc
+*.pth
+
+# data - never commit datasets to git
+data/
+datasets/
+
+# environment
+.env
+venv/
+.venv/
+
+# mlflow
+mlruns/
+
+# jupyter checkpoints
+.ipynb_checkpoints/
+
+# os
+.DS_Store
+Thumbs.db
