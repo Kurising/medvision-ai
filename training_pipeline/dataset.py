@@ -28,7 +28,7 @@ class BrainDataset(Dataset):
         # loads ONE image by index
         # returns (image_tensor, label)
         image_path, label = self.samples[idx]
-        image = Image.open(image_path)
+        image = Image.open(image_path).convert('RGB')
 
         if self.transform:
             image = self.transform(image)

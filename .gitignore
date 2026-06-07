@@ -24,3 +24,13 @@ mlruns/
 # os
 .DS_Store
 Thumbs.db
+
+# in .gitignore
+test_check.py
+
+models/
+
+mlflow.db
+mlruns/
+
+.vscode/
