@@ -7,7 +7,7 @@
 ## Problem
 Brain tumor diagnosis from MRI scans is time-critical and prone to human error. 
 This system assists radiologists by automatically classifying scans and explaining 
-every prediction visually — a legal requirement under the EU AI Act for high-risk 
+every prediction visually, a legal requirement under the EU AI Act for high-risk 
 medical AI systems.
 
 ## What it does
@@ -24,24 +24,25 @@ exactly which brain region influenced the classification.
 ![Architecture](docs/architecture.png)
 
 The system is built in four layers:
-- **Training layer** — PyTorch training pipeline with MLflow experiment tracking
-- **Explainability layer** — GradCAM heatmaps + SHAP values on every prediction
-- **Serving layer** — FastAPI inference service containerised with Docker
-- **Observability layer** — Prometheus metrics + Grafana dashboards
+- **Training layer** : PyTorch training pipeline with MLflow experiment tracking
+- **Explainability layer** : GradCAM heatmaps + SHAP values on every prediction
+- **Serving layer** : FastAPI inference service containerised with Docker
+- **Observability layer** : Prometheus metrics + Grafana dashboards
 
 ## Tech Stack
 | Component | Technology |
 |---|---|
 | Model | PyTorch + EfficientNet-B0 (transfer learning) |
 | Experiment Tracking | MLflow |
-| Inference API | FastAPI — in progress |
-| Containerisation | Docker — in progress |
-| CI/CD | GitHub Actions — in progress |
-| Explainability | GradCAM + SHAP — in progress |
-| Monitoring | Prometheus + Grafana — in progress |
+| Inference API | FastAPI — [in progress] |
+| Containerisation | Docker — [in progress] |
+| CI/CD | GitHub Actions — [in progress] |
+| Explainability | GradCAM + SHAP — [in progress] |
+| Monitoring | Prometheus + Grafana — [in progress] |
 
 ## Project Structure
 
+```
 medvision-ai/
 ├── training_pipeline/   — dataset loading, model, training loop
 ├── inference_service/   — FastAPI inference API
@@ -49,6 +50,7 @@ medvision-ai/
 ├── monitoring/          — Prometheus metrics
 ├── tests/               — pytest test suite
 └── docs/                — architecture diagrams, model card
+```
 
 ## MLflow Experiment Tracking
 ![MLflow Accuracy Curve](docs/mlflow_accuracy.png)
@@ -67,7 +69,7 @@ compliance requirements through:
 - GradCAM explainability on every prediction
 - Audit logging of all inference requests
 - Model card documenting limitations and intended use
-- Human oversight — system is decision-support only, not a replacement for radiologists
+- Human oversight, system is decision-support only, not a replacement for radiologists
 
 ## Author
 Dhilna Kurisingal Mathew
