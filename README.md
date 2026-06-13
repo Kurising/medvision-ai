@@ -100,7 +100,6 @@ pixels pushed the prediction towards or away from each class.*
 
 ```
 medvision-ai/
-
 ├── training_pipeline/   - dataset loading, model, training loop
 │   ├── dataset.py       - PyTorch Dataset class with lazy loading
 │   ├── model.py         - EfficientNet-B0 with 4-class classifier
