@@ -17,9 +17,10 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-    
+
     - name: Install dependencies
       run: |
+        pip install httpx2
         pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
         pip install fastapi uvicorn python-multipart pillow numpy scikit-learn pytest
     
@@ -36,8 +37,3 @@ jobs:
     
     - name: Build Docker image
       run: docker build -t medvision-ai .
-
-    - name: Install dependencies
-      run: |
-        pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-        pip install fastapi uvicorn python-multipart pillow numpy scikit-learn pytest httpx2
