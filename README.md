@@ -16,9 +16,13 @@ using fine-tuned EfficientNet-B0. Every prediction includes a GradCAM heatmap sh
 exactly which brain region influenced the classification.
 
 ## Results
-- Validation accuracy: **95.37%**
-- Training time: ~3.5 minutes (NVIDIA RTX 4070)
-- Dataset: 7,200 brain MRI images across 4 balanced classes
+| Metric | Score |
+|--------|-------|
+| Accuracy | 95.37% |
+| Precision | 95.60% |
+| Recall | 95.37% |
+| F1 Score | 95.31% |
+| AUC-ROC | 99.14% |
 
 ## Architecture
 ![Architecture](docs/architecture.png)
