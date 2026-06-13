@@ -102,41 +102,23 @@ pixels pushed the prediction towards or away from each class.*
 medvision-ai/
 
 ├── training_pipeline/   - dataset loading, model, training loop
-
 │   ├── dataset.py       - PyTorch Dataset class with lazy loading
-
 │   ├── model.py         - EfficientNet-B0 with 4-class classifier
-
 │   ├── train.py         - training loop with MLflow tracking
-
 │   └── evaluate.py      - accuracy, precision, recall, F1, AUC-ROC
-
 ├── inference_service/   - FastAPI inference API
-
 │   ├── main.py          - REST endpoints: /predict /health /model-info
-
 │   └── Dockerfile       - production container
-
 ├── explainability/      - XAI layer
-
 │   ├── gradcam.py       - gradient-weighted activation maps
-
 │   └── shap_explain.py  - pixel-level feature importance
-
 ├── monitoring/          - Prometheus config
-
 ├── tests/               - pytest test suite (CI verified)
-
 ├── docs/                - architecture diagram, model card, risk assessment
-
 │   ├── model_card.md    - EU AI Act model documentation
-
 │   └── risk_assessment.md - EU AI Act risk classification
-
 ├── Dockerfile           - production container
-
 ├── docker-compose.yml   - orchestrates API + MLflow services
-
 └── .github/workflows/   - GitHub Actions CI/CD pipelin
 ```
 
