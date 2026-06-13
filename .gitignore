@@ -27,6 +27,8 @@ Thumbs.db
 
 # in .gitignore
 test_check.py
+test_shap.py
+tets_gradcam.py
 
 models/
 
