@@ -3,5 +3,11 @@ torchvision
 mlflow
 fastapi
 uvicorn
+python-multipart
 pillow
 numpy
+scikit-learn
+shap
+opencv-python
+matplotlib
+httpx
