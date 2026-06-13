@@ -2,8 +2,14 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from fastapi.testclient import TestClient
-from inference_service.main import app
+from unittest.mock import patch, MagicMock
+import torch
+
+# mock model loading before importing app
+with patch('torch.load', return_value={}), \
+     patch('training_pipeline.model.BrainTumorClassifier.load_state_dict'):
+    from fastapi.testclient import TestClient
+    from inference_service.main import app
 
 client = TestClient(app)
 
