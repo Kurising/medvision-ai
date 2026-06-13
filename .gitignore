@@ -36,3 +36,5 @@ mlflow.db
 mlruns/
 
 .vscode/
+
+hf-space/
