@@ -11,3 +11,4 @@ shap
 opencv-python
 matplotlib
 httpx
+httpx2
