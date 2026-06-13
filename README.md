@@ -2,7 +2,7 @@
 ### Production-Grade Explainable Medical Imaging Platform
 *Built to EU AI Act High-Risk AI System Standards*
 
-> "Not a notebook. A production ML system — trained, served, explained, monitored, and deployed."
+> "Not a notebook. A production ML system - trained, served, explained, monitored and deployed."
 
 [![CI/CD](https://github.com/Kurising/medvision-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/Kurising/medvision-ai/actions)
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Hugging_Face-orange)](https://huggingface.co/spaces/dhilna123/medvision-ai)
@@ -26,7 +26,7 @@ Brain tumor diagnosis from MRI scans is time-critical and prone to human error. 
 ---
 
 ## What it does
-Classifies brain MRI scans into 4 categories (glioma, meningioma, pituitary, no tumor) using fine-tuned EfficientNet-B0 with 95.37% validation accuracy. Every prediction includes a GradCAM heatmap showing exactly which brain region influenced the classification — making it explainable auditable, and EU AI Act compliant.
+Classifies brain MRI scans into 4 categories (glioma, meningioma, pituitary, no tumor) using fine-tuned EfficientNet-B0 with 95.37% validation accuracy. Every prediction includes a GradCAM heatmap showing exactly which brain region influenced the classification - making it explainable auditable, and EU AI Act compliant.
 
 ---
 
@@ -85,7 +85,7 @@ pixels pushed the prediction towards or away from each class.*
 | Experiment Tracking| MLflow | ✅ Done |
 | Explainability | GradCAM + SHAP | ✅ Done |
 | Inference API | FastAPI + Pydantic | ✅ Done |
-| Containerisation |Containerisation | Docker + docker-compose | ✅ Done |
+| Containerisation | Docker + docker-compose | ✅ Done |
 | CI/CD | GitHub Actions + pytest | ✅ Done |
 | Monitoring | Prometheus + Grafana | ✅ Done |
 | Live Demo | Hugging Face Spaces | ✅ Done |
@@ -99,6 +99,7 @@ pixels pushed the prediction towards or away from each class.*
 ## Project Structure
 
 ´´´
+
 medvision-ai/
 
 ├── training_pipeline/   - dataset loading, model, training loop
@@ -139,6 +140,7 @@ medvision-ai/
 
 └── .github/workflows/   - GitHub Actions CI/CD pipelin
 
+
 ´´´
 ---
 
@@ -174,6 +176,12 @@ This system addresses compliance requirements through:
 - **Risk assessment** - documented potential harms and mitigation measures
 
 See [docs/model_card.md](docs/model_card.md) and [docs/risk_assessment.md](docs/risk_assessment.md)
+
+---
+
+## Phase 2 — Roadmap
+
+Phase 2 will transform MedVision AI from a local production-grade system into a fully cloud-native MLOps platform. The model will be deployed to AWS ECS with infrastructure managed by Terraform. An Apache Airflow data pipeline will handle automated MRI data ingestion into an S3 data lake with PostgreSQL metadata tracking. Kubernetes will orchestrate autoscaling deployments with rolling updates. EvidentlyAI will monitor for data and model drift, automatically triggering retraining pipelines when performance degrades. EU AI Act compliance documentation will be extended with full audit logging and human oversight workflows - making MedVision AI ready for real healthcare AI deployment in the European market.
 
 ---
 
