@@ -98,8 +98,7 @@ pixels pushed the prediction towards or away from each class.*
 
 ## Project Structure
 
-´´´
-
+```
 medvision-ai/
 
 ├── training_pipeline/   - dataset loading, model, training loop
@@ -139,9 +138,8 @@ medvision-ai/
 ├── docker-compose.yml   - orchestrates API + MLflow services
 
 └── .github/workflows/   - GitHub Actions CI/CD pipelin
+```
 
-
-´´´
 ---
 
 ## Quick Start
@@ -179,7 +177,7 @@ See [docs/model_card.md](docs/model_card.md) and [docs/risk_assessment.md](docs/
 
 ---
 
-## Phase 2 — Roadmap
+## Phase 2 - Roadmap
 
 Phase 2 will transform MedVision AI from a local production-grade system into a fully cloud-native MLOps platform. The model will be deployed to AWS ECS with infrastructure managed by Terraform. An Apache Airflow data pipeline will handle automated MRI data ingestion into an S3 data lake with PostgreSQL metadata tracking. Kubernetes will orchestrate autoscaling deployments with rolling updates. EvidentlyAI will monitor for data and model drift, automatically triggering retraining pipelines when performance degrades. EU AI Act compliance documentation will be extended with full audit logging and human oversight workflows - making MedVision AI ready for real healthcare AI deployment in the European market.
 
